@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title></title>
 </head>
 <body ng-app="arepApp">
 
 	<div ng-controller="get_Controller as controladorG" >
-		<button ng-click="controladorG.get()">Servidor</button>
-	</div>
+		<!-- realiza la peticion GET al servidor -->
+		<input type="text" placeholder="nombre" ng-model="controladorG.arepaObj.name">
+		<br>
+		<input type="text" placeholder="calorias" ng-model="controladorG.arepaObj.calories">
+		<br>
+		<input type="text" placeholder="region" ng-model="controladorG.arepaObj.region">
+		<br>
+		<input type="checkbox" id="hasMeatCheck" ng-model="controladorG.arepaObj.hasMeat">
+		<label for="hasMeatCheck">¿Tiene Carne?</label>
+		<button ng-click="controladorG.get()">Ver</button>
+		<button ng-click="controladorG.create(controladorG.arepaObj)">Crear</button>
+	
+		<hr>
+		<div>
+			<ul>
+				<li ng-repeat="elemento in controladorG.arepas"> <!-- ng-cloak -->
+					{{elemento.name}} - {{elemento.calories}} - {{elemento.region}} - {{elemento.hasMeat}} 
+				</li>
 
+			</ul>
+
+		</div> 
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
 	<script src="./ui-router.js"></script>
 

@@ -2,20 +2,43 @@
 	"use strict";
 	angular
 		.module("arepApp")
-			//comentario
+			//las factory sirven paar la comuncacion con un servidor	
+			// es una sola factory por toda la app	
 			.factory("arepa_Factory", arepa_Factory)
 
-			function arepa_Factory($http){
+			function arepa_Factory($http, $q){ // $q = liberia de promesas				
 
 				var _arepa_Factory_ = {};
 
+				//solicitud del metodo get al servidor
 				_arepa_Factory_.get = function(){
-					$http.get('http://192.168.1.204:9000/api/arepas')
+
+					var deferred = $q.defer(); 
+
+					$http.get('http://192.168.1.206:9000/api/arepas')
+					// si la peticion es exitosa muestre en consola lo que responde el servidor
 							.success(function(response){
-	 							console.log(response);
+	 							//console.log(response); // devuelve repsuesta del servidor
+	 							deferred.resolve(response);
+	 						})
+	 						.error(function(er){
+	 							deferred.reject(er);
 	 						});
 
+	 				return deferred.promise;
+
 				}	
+				_arepa_Factory_.create = function(arepaObj){
+					console.log(arepaObj);
+					$http.post('http://192.168.1.206:9000/api/arepas', arepaObj);
+				}
+
+				_arepa_Factory_.edit = function(){
+					$http.put('http://192.168.1.206:9000/api/arepas')
+						.success(function(response){
+	 							return response;
+	 						});
+				}
 
 
 				return _arepa_Factory_;
