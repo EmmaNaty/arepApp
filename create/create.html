@@ -1,0 +1,12 @@
+		<!-- realiza la peticion GET al servidor -->
+		<input type="text" placeholder="nombre" ng-model="controladorG.arepaObj.name">
+		<br>
+		<input type="text" placeholder="calorias" ng-model="controladorG.arepaObj.calories">
+		<br>
+		<input type="text" placeholder="region" ng-model="controladorG.arepaObj.region">
+		<br>
+		<input type="checkbox" id="hasMeatCheck" ng-model="controladorG.arepaObj.hasMeat">
+		<label for="hasMeatCheck">¿Tiene Carne?</label>
+		
+		<button ng-click="controladorG.create(controladorG.arepaObj)">Crear</button>
+	

@@ -28,6 +28,7 @@
 
 
 		vm.get = function(){
+			console.log("get fn")
 	 		var promise = arepa_Factory.get();	
 	 		promise.then(function(response){
 	 			vm.arepas = response;

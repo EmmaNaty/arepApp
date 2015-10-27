@@ -1,0 +1,13 @@
+<button ng-click="controladorG.get()">Ver</button>
+	<div >
+		<hr>
+		<div>
+			<ul>
+				<li ng-repeat="elemento in controladorG.arepas"> <!-- ng-cloak -->
+					{{elemento.name}} - {{elemento.calories}} - {{elemento.region}} - {{elemento.hasMeat}} 
+				</li>
+
+			</ul>
+
+		</div> 
+	</div>
