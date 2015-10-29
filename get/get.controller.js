@@ -16,10 +16,6 @@
 
 		vm.arepaObj = 
 			{
-				name:"choclo",
-				calories: 500,
-				region: "boyaca",
-				hasMeat: false
 
 			};
 

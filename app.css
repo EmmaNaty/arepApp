@@ -1,27 +1,69 @@
-div{
-	background-color: lightgray;
-	color: rgb(255,255,255);
+body{
+	font-family: sans-serif;
+}
+input, button{
+	outline: none;
+}
+input, select{
+	border: 1px solid lightblue;
+	color: #444;
+	font-size: 16px;
+	padding: 5px;
+	font-weight: light;
+	border-radius: 3px;
 }
 
-.cajita{
-	background-color: rgba(255, 100, 20, 0.9);
-	padding: 20px;
-	border: 4px dashed black;
-	margin: 20px;
-}
-
-.cajita:hover{
-	background: brown;
-}
-
-/***************************************/
-
-input{
-	border: 1px solid salmon;
-	color: red;
+input:focus{
+	border: 3px solid lightblue;
 }
 
 .input-container{
 	margin: 10px;
 	padding: 10px;
+}
+.input-container>label{
+	color: black;
+	display: block;
+	margin-bottom: 8px; 
+}
+
+.create-btn{
+    padding: 8px;
+    background: white;
+    border: 3px solid #435CB8;
+    width: 200px;
+    height: 66px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 35px;
+    animation: pulse 5s infinite;
+}
+
+.create-btn:active{
+	color: #dedede;
+}
+.create-btn:hover{
+	box-shadow: 5px 8px 9px #536CC8;
+	background: #fefefe;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #d01F3F;
+    color: black;
+    margin-left: 5px;
+    box-shadow: 1px 3px 9px #536CC8;
+  }
+  50% {
+    background-color: #FF4136;
+    color: white;
+    margin-left: 250px;
+    box-shadow: none;
+  }
+  100% {
+    background-color: #d01F3F;
+    color: black;
+    margin-left: 5px;
+    box-shadow: 5px 8px 9px #536CC8;
+  }
 }
