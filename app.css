@@ -1,0 +1,27 @@
+div{
+	background-color: lightgray;
+	color: rgb(255,255,255);
+}
+
+.cajita{
+	background-color: rgba(255, 100, 20, 0.9);
+	padding: 20px;
+	border: 4px dashed black;
+	margin: 20px;
+}
+
+.cajita:hover{
+	background: brown;
+}
+
+/***************************************/
+
+input{
+	border: 1px solid salmon;
+	color: red;
+}
+
+.input-container{
+	margin: 10px;
+	padding: 10px;
+}
