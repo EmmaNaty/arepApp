@@ -1,0 +1,67 @@
+MAQUETA_COLOR_PRIMARIO = #FD1586
+MAQUETA_COLOR_SECUNDARIO = rgb(10,100,250)
+
+body
+  font-family sans-serif
+
+input,
+button
+  outline none
+
+input,
+select
+  border 1px solid MAQUETA_COLOR_PRIMARIO
+  color #444
+  font-size 16px
+  padding 5px
+  font-weight light
+  border-radius 3px
+
+input
+  &:focus
+    border 3px solid MAQUETA_COLOR_PRIMARIO
+  &:hover
+    background 
+
+
+.input-container
+  margin 10px
+  padding 10px
+
+.input-container
+  &>label
+    color black
+    display block
+    margin-bottom 8px
+
+.create-btn
+  padding 8px
+  background MAQUETA_COLOR_SECUNDARIO
+  border 3px solid #435CB8
+  width 200px
+  height 66px
+  cursor pointer
+  font-size 20px
+  border-radius 35px
+  animation pulse 5s infinite
+
+.create-btn:active
+  color #dedede
+
+.create-btn:hover
+  box-shadow 5px 8px 9px #536CC8
+  background #fefefe
+
+@keyframes pulse
+  0%
+    color black
+    margin-left 5px
+    box-shadow 1px 3px 9px #536CC8
+  50%
+    color white
+    margin-left 250px
+    box-shadow none
+  100%
+    color black
+    margin-left 5px
+    box-shadow 5px 8px 9px #536CC8
