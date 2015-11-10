@@ -15,13 +15,19 @@
 		            .state('crear', {
 		              url: "/crear",
 		              templateUrl: "./create/create.html",
-		              controller: "get_Controller as controladorG",
+		              controller: "create_Controller as controladorC",
 		              
 		            })
 		            .state('ver', {
 		              url: "/ver",
 		              templateUrl: "./get/get.html",
 		              controller: "get_Controller as controladorG",
+		              
+		            })
+		            .state('editar', {
+		              url: "/editar",
+		              templateUrl: "./edit/edit.html",
+		              controller: "edit_Controller as controladorE",
 		              
 		            })
 	        });

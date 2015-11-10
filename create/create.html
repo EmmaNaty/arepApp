@@ -1,24 +1,24 @@
 <!-- realiza la peticion GET al servidor -->
 <div class="input-container">
 	<label>Nombre</label>
-	<input type="text" placeholder="Nombre" ng-model="controladorG.arepaObj.name">
+	<input type="text" placeholder="Nombre" ng-model="controladorC.arepaObj.name">
 </div>
 <div class="input-container">
 	<label>Calorias</label>
-	<input type="text" placeholder="Calorias" ng-model="controladorG.arepaObj.calories">
+	<input type="text" placeholder="Calorias" ng-model="controladorC.arepaObj.calories">
 </div>
 <div class="input-container">
 	<label>Region</label>
-	<input type="text" placeholder="Region" ng-model="controladorG.arepaObj.region">
+	<input type="text" placeholder="Region" ng-model="controladorC.arepaObj.region">
 </div>
 <div class="input-container">
 	<label for="hasMeatSelect">¿Tiene Carne?</label>
-	<select id="hasMeatSelect" ng-model="controladorG.arepaObj.hasMeat">
+	<select id="hasMeatSelect" ng-model="controladorC.arepaObj.hasMeat">
 		<option value="true">Sí</option>
 		<option value="false">No</option>
 	</select>
 
 </div>
 
-<button class="create-btn" ng-click="controladorG.create(controladorG.arepaObj)">Crear</button>
+<button class="create-btn" ng-click="controladorC.create(controladorC.arepaObj)">Crear</button>
 

@@ -6,23 +6,22 @@
 	// nombre del modulo al que va atado el controlador
 		.module("arepApp")
 			// es un controlador por modulo (es lo mejor)
-			.controller("get_Controller", controladorGet);
+			.controller("edit_Controller", controladorEdit);
 
 
-	function controladorGet(arepa_Factory){
+	function controladorEdit(arepa_Factory){
 		// convierte a publicas todas las variables
 		// ahora las variables se pueden acceder desde la vista (index.html)
 		var vm = this;
 
-		/*vm.arepaObj = 
-			{
-
-			};*/
+		vm.arepaObj = {};
 
 		vm.arepas = [];
 
+
+
 		vm.get = function(){
-			//console.log("get fn");
+			console.log("get fn")
 	 		var promise = arepa_Factory.get();	
 	 		promise.then(function(response){
 	 			vm.arepas = response;
@@ -35,6 +34,13 @@
 	 		});	
 	 	}
 
+	 	vm.edit = function(){
+	 		vm.arepaObj = vm.arepas[vm.arepaObj.n - 1] 		
+	 	}
+
+	 	vm.create = function(value){
+	 		arepa_Factory.edit(value);	 		
+	 	}
 
 	}
 

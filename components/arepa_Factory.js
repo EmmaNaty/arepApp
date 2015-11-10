@@ -15,7 +15,8 @@
 
 					var deferred = $q.defer(); 
 
-					$http.get('http://192.168.1.206:9000/api/arepas')
+					//$http.get('http://192.168.1.206:9000/api/arepas')
+					$http.get('http://tappsiweb2.cloudapp.net:9000/api/arepas')
 					// si la peticion es exitosa muestre en consola lo que responde el servidor
 							.success(function(response){
 	 							//console.log(response); // devuelve repsuesta del servidor
@@ -30,14 +31,14 @@
 				}	
 				_arepa_Factory_.create = function(arepaObj){
 					console.log(arepaObj);
-					$http.post('http://192.168.1.206:9000/api/arepas', arepaObj);
+					//$http.post('http://192.168.1.206:9000/api/arepas', arepaObj);
+					$http.post('http://tappsiweb2.cloudapp.net:9000/api/arepas', arepaObj);
 				}
 
-				_arepa_Factory_.edit = function(){
-					$http.put('http://192.168.1.206:9000/api/arepas')
-						.success(function(response){
-	 							return response;
-	 						});
+				_arepa_Factory_.edit = function(arepaUpdate){
+					//$http.put('http://192.168.1.206:9000/api/arepas')
+					console.log(arepaUpdate);
+					$http.put('http://tappsiweb2.cloudapp.net:9000/api/arepas/' + arepaUpdate._id, arepaUpdate);
 				}
 
 
